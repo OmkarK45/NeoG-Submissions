@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "readline-sync": "^1.4.10"
+  },
+  "scripts": {
+    "dev": "nodemon lesson1.js",
+    "start": "node lesson1.js"
+  }
+}
