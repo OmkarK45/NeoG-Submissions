@@ -126,8 +126,6 @@ const quiz = () => {
     } else {
       if (response.toLocaleLowerCase() == qBank[i].ans.toLocaleLowerCase()) {
         score++;
-      } else {
-        break;
       }
       i++;
     }
