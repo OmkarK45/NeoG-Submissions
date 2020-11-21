@@ -1,32 +1,26 @@
 const readlineSync = require("readline-sync");
 const chalk = require("chalk");
 
-// Chalk Colors
-const colors = {
-  blue: chalk.bold.blue,
-  red: chalk.bold.red,
-  yellow: chalk.bold.yellow,
-  green: chalk.bold.green,
-  white: chalk.bold.white,
-};
+const { blue, red, yellow, green, white } = chalk.bold;
+const { bgRed, bgGreen, bgBlue, bgYellow, bold } = chalk;
 console.log(chalk.bgRed("⚡ Welcome to the GTA 5 Quiz ! ⚡"));
 
 // Player Intro
-const player = readlineSync.question(colors.green("Hey, What's your name ?\n"));
+const player = readlineSync.question(green("Hey, What's your name ?\n"));
 
-console.log(chalk.bgRed.black(` Welcome ${player}, Let\'s play! `));
+console.log(bgRed.black(` Welcome ${player}, Let\'s play! `));
 
 // Rules of the game
-console.log(chalk.bgGreen.black(" Rules of this game are simple \n"));
+console.log(bgGreen.black(" Rules of this game are simple \n"));
 console.log(
-  chalk.bgBlue.black(
+  bgBlue.black(
     " 1. You will be asked 10 question based on GTA V\n 2. Each question will have 4 options out of which only one is correct. \n 3. You will be rewarded 1 point for each correct response!\n"
   )
 );
-console.log(chalk.bgYellow.black("All The Best !! "));
+console.log(bgYellow.black("All The Best !! "));
 
 let score = 0;
-
+const validResponses = ["a", "b", "c", "d"];
 const qBank = [
   {
     q: "When was GTA V released first ?\n",
@@ -102,7 +96,7 @@ const qBank = [
   },
   {
     q: "On which platform GTA 5 WASN’T released ?\n",
-    a: "Sony PlaySation 3",
+    a: "Sony Playstation 3",
     b: "XBOX 360",
     c: "Sony Playstation 4",
     d: "Sony Playstation 2",
@@ -110,17 +104,15 @@ const qBank = [
   },
 ];
 
-// Game Driver
 const quiz = () => {
   for (let i = 0; i < qBank.length; ) {
-    console.log(chalk.bold.bgHex("f8fbba").black(`Q${i + 1} : ${qBank[i].q}`));
-    console.log(chalk.bold.hex("b6ebf1")(`          a: ${qBank[i].a}`));
-    console.log(chalk.bold.hex("b6ebf1")(`          b: ${qBank[i].b}`));
-    console.log(chalk.bold.hex("b6ebf1")(`          c: ${qBank[i].c}`));
-    console.log(chalk.bold.hex("b6ebf1")(`          d: ${qBank[i].d}`));
+    console.log(white(`Q${i + 1} : ${qBank[i].q}`));
+    console.log(bold.hex("b6ebf1")(`          a: ${qBank[i].a}`));
+    console.log(bold.hex("b6ebf1")(`          b: ${qBank[i].b}`));
+    console.log(bold.hex("b6ebf1")(`          c: ${qBank[i].c}`));
+    console.log(bold.hex("b6ebf1")(`          d: ${qBank[i].d}`));
     const response = readlineSync.question("Your Response : ");
     console.log("\n===========================================\n");
-    const validResponses = ["a", "b", "c", "d"];
     if (!validResponses.includes(response)) {
       console.log("Invalid Option Please try again!");
     } else {
@@ -134,4 +126,7 @@ const quiz = () => {
 };
 
 quiz();
-console.log("Your score was : ", score);
+console.log("Your score is : ", score);
+console.log(
+  chalk.green("\nThanks for playing ! Source code on github.com/omkark45")
+);
