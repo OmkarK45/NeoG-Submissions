@@ -18,5 +18,95 @@ console.log(chalk.bgRed.black(` Welcome ${player}, Let\'s play! `));
 
 // Rules of the game
 console.log(chalk.bgGreen.black(" Rules of this game are simple \n"));
+console.log(
+  chalk.bgBlue.black(
+    " 1. You will be asked 10 question based on GTA V\n 2. Each question will have 4 options out of which only one is correct. \n 3. You will be rewarded 1 point for each correct response!\n"
+  )
+);
+console.log(chalk.bgYellow.black("All The Best !! "));
 
 // Game Driver
+let score = 0;
+
+const qBank = [
+  {
+    q: "When was GTA V released first ?\n",
+    a: 2011,
+    b: 2012,
+    c: 2013,
+    d: 2014,
+    ans: "c",
+  },
+  {
+    q: "How old is Franklin when GTA 5 takes place ?\n",
+    a: 25,
+    b: 21,
+    c: 19,
+    d: 30,
+    ans: "a",
+  },
+  {
+    q: "How many kids do Micheal have ?\n",
+    a: 2,
+    b: 3,
+    c: 5,
+    d: 10,
+    ans: "a",
+  },
+  {
+    q: "Who is the older of all 3 protagonist ?\n",
+    a: "Michael",
+    b: "Trevor",
+    c: "Franklin",
+    d: "Can't say",
+    ans: "a",
+  },
+  {
+    q: "Who is Franklin's best friend in the hood ?\n",
+    a: "Lester",
+    b: "Travis",
+    c: "Lamar",
+    d: "Tennis Coach",
+    ans: "a",
+  },
+  {
+    q: "Number of missons in GTA V (Except DLC)\n",
+    a: 69,
+    b: 58,
+    c: 71,
+    d: 80,
+    ans: "a",
+  },
+  {
+    q: "Who played Franklin Clinton in Grand Theft Auto 5 ?\n",
+    a: 'Gerald "Slink" Johnson',
+    b: "Shawn Darnell Fonteno",
+    c: "Artimus Lamont Bentley",
+    d: 'Christopher "Chris" Bellard',
+    ans: "b",
+  },
+  {
+    q: "What's the first mission in GTA V ?\n",
+    a: "Repossession",
+    b: "Father Son",
+    c: "Daddy's Little Girl",
+    d: "Prologue",
+    ans: "d",
+  },
+  {
+    q: "What is the name of Franklin’s dog?\n",
+    a: "Oscar",
+    b: "Tabby",
+    c: "Chop",
+    d: "Chris",
+    ans: "c",
+  },
+  {
+    q: "On which platform GTA 5 WASN’T released ?\n",
+    a: "Sony PlaySation 3",
+    b: "XBOX 360",
+    c: "Sony Playstation 4",
+    d: "Sony Playstation 2",
+    ans: "d",
+  },
+];
