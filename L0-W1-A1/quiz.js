@@ -25,7 +25,6 @@ console.log(
 );
 console.log(chalk.bgYellow.black("All The Best !! "));
 
-// Game Driver
 let score = 0;
 
 const qBank = [
@@ -110,3 +109,31 @@ const qBank = [
     ans: "d",
   },
 ];
+
+// Game Driver
+const quiz = () => {
+  for (let i = 0; i < qBank.length; ) {
+    console.log(chalk.bold.bgHex("f8fbba").black(`Q${i + 1} : ${qBank[i].q}`));
+    console.log(chalk.bold.hex("b6ebf1")(`          a: ${qBank[i].a}`));
+    console.log(chalk.bold.hex("b6ebf1")(`          b: ${qBank[i].b}`));
+    console.log(chalk.bold.hex("b6ebf1")(`          c: ${qBank[i].c}`));
+    console.log(chalk.bold.hex("b6ebf1")(`          d: ${qBank[i].d}`));
+    const response = readlineSync.question("Your Response : ");
+    console.log("\n===========================================\n");
+    const validResponses = ["a", "b", "c", "d"];
+    if (!validResponses.includes(response)) {
+      console.log("Invalid Option Please try again!");
+    } else {
+      if (response.toLocaleLowerCase() == qBank[i].ans.toLocaleLowerCase()) {
+        score++;
+      } else {
+        break;
+      }
+      i++;
+    }
+  }
+  return score;
+};
+
+quiz();
+console.log("Your score was : ", score);
