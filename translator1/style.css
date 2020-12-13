@@ -61,6 +61,9 @@ p {
   text-align: center;
   margin: 1rem auto;
 }
+.disabledBtn {
+  opacity: 0.9;
+}
 .inputText,
 .outputText {
   font-size: 20px;
@@ -98,5 +101,3 @@ p {
     margin: 1rem auto;
   }
 }
-
-
