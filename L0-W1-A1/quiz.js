@@ -106,18 +106,23 @@ const qBank = [
 
 const quiz = () => {
   for (let i = 0; i < qBank.length; ) {
+    console.log("\n===========================================\n");
     console.log(white(`Q${i + 1} : ${qBank[i].q}`));
     console.log(bold.hex("b6ebf1")(`          a: ${qBank[i].a}`));
     console.log(bold.hex("b6ebf1")(`          b: ${qBank[i].b}`));
     console.log(bold.hex("b6ebf1")(`          c: ${qBank[i].c}`));
     console.log(bold.hex("b6ebf1")(`          d: ${qBank[i].d}`));
     const response = readlineSync.question("Your Response : ");
-    console.log("\n===========================================\n");
+
     if (!validResponses.includes(response)) {
-      console.log("Invalid Option Please try again!");
+      console.log(bgRed.black("Invalid Option Please try again!"));
     } else {
       if (response.toLocaleLowerCase() == qBank[i].ans.toLocaleLowerCase()) {
+        console.log(bgGreen.black(" Correct Answer ! "));
         score++;
+      } else {
+        console.log(bgRed.black(" Incorrect Answer! "));
+        console.log(bgBlue.black("The correct answer is :", qBank[i].ans));
       }
       i++;
     }
