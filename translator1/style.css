@@ -18,6 +18,10 @@ h2,
 p {
   font-family: var(--baseFont);
 }
+a{
+  text-decoration: none;
+  
+}
 .header {
   max-width: 60%;
   margin: 0 auto;
