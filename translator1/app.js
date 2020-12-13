@@ -5,6 +5,8 @@ const output = document.querySelector(".outputText");
 
 const handleError = (err) => {
   btn.textContent = "Translate";
+  btn.disabled = false;
+  btn.classList.remove("disabledBtn");
   console.log(err);
   if (err.code === 429) {
     alert("Please wait as API Rate Exceeded! Thank You :D");
@@ -19,6 +21,8 @@ const translator = (inputText) => {
     .then((obj) => {
       if (!obj.error) {
         btn.textContent = "Translate";
+        btn.disabled = false;
+        btn.classList.remove("disabledBtn");
         console.log(obj);
         output.value = obj.contents.translated;
       } else {
@@ -33,6 +37,8 @@ const translator = (inputText) => {
 btn.addEventListener("click", () => {
   let inputText = input.value;
   btn.textContent = "Loading...";
+  btn.disabled = true;
+  btn.classList.add("disabledBtn");
   console.log(inputText);
   translator(inputText);
 });
