@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+:root {
+  --font: "Poppins", system-ui, sans-serif;
+  --bs: 0px 8px 16px 0px rgba(17, 17, 17, 0.04);
+}
+body {
+  background-color: #f7f7fc;
+}
+.heading {
+  font-family: var(--font);
+  font-weight: 600;
+  text-align: center;
+}
+.inputBar {
+  margin: 2rem auto;
+  width: 100%;
+  padding: 16px 16px;
+  background-color: #eff0f6;
+  border: none;
+  border-radius: 16px;
+  font-family: var(--font);
+  font-size: 18px;
+}
+.parent {
+  border-radius: 32px;
+  max-width: 60%;
+  margin: 3rem auto;
+  background-color: white;
+  padding: 2rem 3rem;
+  box-shadow: var(--bs);
+}
+.emoji-meaning {
+  max-width: 40%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25px;
+  padding: 1rem 2rem;
+  box-shadow: var(--bs);
+  font-size: 20px;
+  font-family: var(--font);
+  color: #6e7191;
+}
+.emoji-database h3 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: var(--font);
+}
+.emoji-database {
+  min-width: 70%;
+  box-shadow: var(--bs);
+  margin: 2rem auto;
+  border: 1px solid #eee;
+  border-radius: 25px;
+  padding: 2rem 0;
+}
+.emoji-holder {
+  margin: auto 0;
+}
+.meaning-holder {
+  text-align: center;
+}
+.wrapper {
+  max-width: 70%;
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 1.7rem;
+}
+.meaning-holder {
+  margin-left: 0.5rem;
+}
+@media (max-width: 768px) {
+  .parent {
+    max-width: 90%;
+    padding: 2rem 1.5rem;
+    margin: 1rem auto;
+  }
+  .emoji-database {
+    max-width: 100%;
+    margin: 2rem auto;
+  }
+  .emoji-meaning {
+    max-width: 90%;
+  }
+}
