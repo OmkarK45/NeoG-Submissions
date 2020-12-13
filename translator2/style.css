@@ -120,6 +120,6 @@ a {
   margin-right: 1rem;
 }
 .btn-2 {
-  background-image: linear-gradient(45deg, #213BC4 0%, #AA47CC 77%);
-  box-shadow: 0rem 0.5rem 1.75rem 0.25rem #D6CCFF;
+  background-image: linear-gradient(45deg, #213bc4 0%, #aa47cc 77%);
+  box-shadow: 0rem 0.5rem 1.75rem 0.25rem #d6ccff;
 }
