@@ -36,7 +36,7 @@ const translator = (inputText) => {
 
 btn.addEventListener("click", () => {
   let inputText = input.value;
-  btn.textContent = "Loading...";
+  btn.innerHTML = `<i class="fas fa-sync-alt"></i> Loading...`;
   btn.disabled = true;
   btn.classList.add("disabledBtn");
   console.log(inputText);
