@@ -1,5 +1,131 @@
+@font-face {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+      format("woff2");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Product Sans";
+}
+.App {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  padding: 2rem 3rem;
+  border: 1.5px solid rgb(204, 204, 204);
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  .App {
+    padding: 1.3rem 1.3rem;
+  }
+}
+.App h1 {
+  text-align: center;
+}
+.App p {
+  font-size: 1.3rem;
+  margin: 1rem auto;
+}
+.button-wrapper {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .button-wrapper {
+    padding: 1rem 0;
+  }
+}
+.button-wrapper button {
+  box-shadow: 0 4px #c1a23c;
+  color: #5e4800;
+  background-color: #ffd95e;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  font-weight: 900;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin: 0 1rem;
+  border: none;
+}
+@media (max-width: 768px) {
+  .button-wrapper button {
+    margin: 0 0.3rem;
+  }
+}
+.button-wrapper button:active {
+  box-shadow: 0 1px #c1a23c;
+  transform: translateY(3px);
+}
+
+.songCard {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(253, 253, 253);
+  margin: 1rem auto;
+  padding: 1rem 0.8rem;
+  border-radius: 16px;
+  border: 1px solid rgb(218, 218, 218);
+  box-shadow: 0 4px #eee;
+  /* background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.6169818269104517) 45%,
+    rgba(0, 0, 0, 0.5105392498796393) 100%
+  ); */
+}
+
+.songCard .name {
+  font-size: 1.4rem;
+  margin: 0.3rem auto;
+}
+.songCard .album {
+  font-size: 1.3rem;
+  color: #6e7191;
+  margin: 0.3rem auto;
+}
+.songCard .year {
+  font-size: 1.1rem;
+  color: #6e7191;
+  margin: 0.3rem auto;
+}
+.songCard .wrapper {
+  margin: 0.6rem 0;
+}
+.rating {
+  margin-right: 0.8rem;
+  background-color: #ded3ff;
+  border-radius: 15px;
+  padding: 0.2rem 0.8rem;
+}
+.spotify {
+  background-color: #1ed760;
+  padding: 0.2rem 0.8rem;
+  border-radius: 15px;
+}
+
+.spotify-link {
+  text-decoration: none;
+  color: white;
+}
+#logo {
+  padding-top: 0.2rem;
+  padding-right: 0.2rem;
+}
+.details {
+  max-width: 60%;
+}
+.img {
+  overflow: hidden;
+  display: block;
+  margin: auto 0;
+  border-radius: 5px;
 }

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import songDB from "./songDB";
 import Song from "./components/Song";
+import "./App.css";
 
 const App = () => {
   const [genre, setGenre] = useState("Rock");
@@ -27,6 +28,15 @@ const App = () => {
         {songDB[genre].map((e, index) => (
           <Song key={index} data={e} />
         ))}
+      </div>
+      <div style={{ textAlign: "center" }}>
+        <a
+          href="https://omkarkulkarni.netlify.app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Visit My Portfolio
+        </a>
       </div>
     </div>
   );
